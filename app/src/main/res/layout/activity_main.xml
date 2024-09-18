@@ -78,7 +78,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -88,7 +88,7 @@
                 android:gravity="center"
                 android:textColor="@color/ctn"
                 android:background="@color/black"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="c" />
@@ -100,7 +100,7 @@
                 android:textColor="@color/white"
                 android:background="@color/black"
                 android:textStyle="bold"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:text="7" />
@@ -112,7 +112,7 @@
                 android:textColor="@color/white"
                 android:background="@color/black"
                 android:textStyle="bold"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:text="4" />
@@ -123,7 +123,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:background="@color/black"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -135,7 +135,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:background="@color/black"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:gravity="center"
@@ -147,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:orientation="vertical">
 
@@ -158,10 +158,10 @@
                 android:textColor="@color/ctn"
                 android:background="@color/black"
                 android:textStyle="bold"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:text=">" />
+                android:text=">>" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/eight"
@@ -169,7 +169,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textColor="@color/white"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:background="@color/black"
                 android:textStyle="bold"
@@ -181,7 +181,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textColor="@color/white"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:background="@color/black"
                 android:textStyle="bold"
@@ -193,7 +193,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:textColor="@color/white"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:background="@color/black"
                 android:textStyle="bold"
@@ -206,7 +206,7 @@
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:background="@color/black"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="." />
@@ -217,7 +217,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -227,7 +227,7 @@
                 android:textColor="@color/ctn"
                 android:background="@color/black"
                 android:textStyle="bold"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:gravity="center"
                 android:text="%" />
@@ -239,7 +239,7 @@
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:background="@color/black"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="9" />
@@ -251,7 +251,7 @@
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:background="@color/black"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="6" />
@@ -264,7 +264,7 @@
                 android:textColor="@color/white"
                 android:background="@color/black"
                 android:textStyle="bold"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:text="3" />
 
@@ -272,7 +272,7 @@
                 android:id="@+id/doublezero"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textSize="20sp"
                 android:background="@color/black"
                 android:gravity="center"
@@ -288,7 +288,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatButton
@@ -299,7 +299,7 @@
                 android:background="@color/black"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="/" />
 
@@ -311,7 +311,7 @@
                 android:background="@color/black"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="*" />
 
@@ -323,7 +323,7 @@
                 android:background="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="+" />
 
@@ -335,7 +335,7 @@
                 android:background="@color/black"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:gravity="center"
                 android:text="-" />
 
@@ -343,7 +343,7 @@
                 android:id="@+id/equal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/ctn"
                 android:background="@color/black"
                 android:textSize="20sp"
