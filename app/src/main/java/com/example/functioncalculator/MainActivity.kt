@@ -1,17 +1,12 @@
 package com.example.functioncalculator
 
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 
 class MainActivity : AppCompatActivity() {
-    lateinit var experssionView: EditText
+    lateinit var expressionView: EditText
     lateinit var resultView: EditText
     var expression = "" // For holding the user inputs
     var result = "" // For holding the result after calculation
@@ -21,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Bind UI elements
-        experssionView = findViewById(R.id.zero)
         resultView = findViewById(R.id.result)
 
 
@@ -42,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         val buttonEqual: AppCompatButton = findViewById(R.id.equal)
         val buttonClear: AppCompatButton = findViewById(R.id.clear)
         val buttonDecimal: AppCompatButton = findViewById(R.id.decimal)
-        val buttonBackspace: AppCompatButton = findViewById(R.id.backspace)
+//        val buttonBackspace: AppCompatButton = findViewById(R.id.backspace)
 
         // Handle button clicks
         button0.setOnClickListener { appendToExpression("0") }
@@ -62,14 +56,20 @@ class MainActivity : AppCompatActivity() {
         buttonMultiply.setOnClickListener { appendToExpression("*") }
         buttonDivide.setOnClickListener { appendToExpression("/") }
 
-        //buttonEqual.setOnClickListener { calculateResult() }
+        buttonEqual.setOnClickListener { calculateResult(expression) }
         buttonClear.setOnClickListener { clearExpression() }
        // buttonBackspace.setOnClickListener { backspace() }
     }
 
     private fun appendToExpression(value: String) {
         expression += value
-      //  expressionView.setText(expression)
+        expressionView.setText(expression)
+    }
+
+    private fun calculateResult(value: String): Int {
+        val ans = value.toInt()
+        resultView.setText(ans)
+        return ans
     }
 
     private fun clearExpression() {
