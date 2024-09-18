@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         val buttonEqual: AppCompatButton = findViewById(R.id.equal)
         val buttonClear: AppCompatButton = findViewById(R.id.clear)
         val buttonDecimal: AppCompatButton = findViewById(R.id.decimal)
-//        val buttonBackspace: AppCompatButton = findViewById(R.id.backspace)
+        val buttonBackspace: AppCompatButton = findViewById(R.id.backspace)
 
         // Handle button clicks
         button0.setOnClickListener { appendToExpression("0") }
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonEqual.setOnClickListener { calculateResult(expression) }
         buttonClear.setOnClickListener { clearExpression() }
-       // buttonBackspace.setOnClickListener { backspace() }
+        buttonBackspace.setOnClickListener { backspace() }
     }
 
     private fun appendToExpression(value: String) {
@@ -70,6 +70,11 @@ class MainActivity : AppCompatActivity() {
         val ans = value.toInt()
         resultView.setText(ans)
         return ans
+    }
+
+    private fun backspace() {
+        expression.dropLast(1)
+        expressionView.setText(expression)
     }
 
     private fun clearExpression() {
