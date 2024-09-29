@@ -6,14 +6,17 @@ import android.widget.EditText
 import androidx.appcompat.widget.AppCompatButton
 
 class MainActivity : AppCompatActivity() {
-//    var expressionView: EditText = findViewById(R.id.expression)
-//    var resultView: EditText = findViewById(R.id.result)
     var expression = "" // For holding the user inputs
     var result = "" // For holding the result after calculation
+
+    lateinit var expressionView: EditText
+    lateinit var resultView: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        expressionView = findViewById(R.id.expression)
+        resultView = findViewById(R.id.result)
 
         val button0: AppCompatButton = findViewById(R.id.zero)
         val button1: AppCompatButton = findViewById(R.id.one)
@@ -51,33 +54,33 @@ class MainActivity : AppCompatActivity() {
         buttonSubtract.setOnClickListener { appendToExpression("-") }
         buttonMultiply.setOnClickListener { appendToExpression("*") }
         buttonDivide.setOnClickListener { appendToExpression("/") }
-//
-//        buttonEqual.setOnClickListener { calculateResult(expression) }
-//        buttonClear.setOnClickListener { clearExpression() }
-//        buttonBackspace.setOnClickListener { backspace() }
+
+        buttonEqual.setOnClickListener { calculateResult(expression) }
+        buttonClear.setOnClickListener { clearExpression() }
+        buttonBackspace.setOnClickListener { backspace() }
     }
 
     private fun appendToExpression(value: String) {
         expression += value
-//        expressionView.setText(expression)
+        expressionView.setText(expression)
     }
-//
-//    private fun calculateResult(value: String): Int {
-//        val ans = value.toInt()
-//        resultView.setText(ans)
-//        return ans
-//    }
-//
-//    private fun backspace() {
-//        expression.dropLast(1)
-//        expressionView.setText(expression)
-//    }
-//
-//    private fun clearExpression() {
-//        expression = ""
-//        result = ""
-//      //  expressionView.setText("0")
-//        resultView.setText("=0")
-//    }
+
+    private fun calculateResult(value: String): Int {
+        val ans = value.toInt()
+        resultView.setText(ans)
+        return ans
     }
+
+    private fun backspace() {
+        expression.dropLast(1)
+        expressionView.setText(expression)
+    }
+
+    private fun clearExpression() {
+        expression = ""
+        result = ""
+        expressionView.setText("0")
+        resultView.setText("=0")
+    }
+}
 
