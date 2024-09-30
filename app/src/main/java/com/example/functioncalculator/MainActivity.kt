@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
         expressionView = findViewById(R.id.expression)
         resultView = findViewById(R.id.result)
 
+        val exitButton: AppCompatButton = findViewById(R.id.exit)
+        exitButton.setOnClickListener() {
+            finish()
+        }
+
         val button0: AppCompatButton = findViewById(R.id.zero)
         val button1: AppCompatButton = findViewById(R.id.one)
         val button2: AppCompatButton = findViewById(R.id.two)
