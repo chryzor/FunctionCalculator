@@ -1,6 +1,7 @@
 package com.example.functioncalculator
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.EditText
 import androidx.appcompat.widget.AppCompatButton
@@ -8,6 +9,7 @@ import androidx.appcompat.widget.AppCompatButton
 class MainActivity : AppCompatActivity() {
     var expression = "" // For holding the user inputs
     var result = "" // For holding the result after calculation
+    var lastResult = 0
 
     lateinit var expressionView: EditText
     lateinit var resultView: EditText
@@ -21,6 +23,11 @@ class MainActivity : AppCompatActivity() {
         val exitButton: AppCompatButton = findViewById(R.id.exit)
         exitButton.setOnClickListener() {
             finish()
+        }
+
+        val last: AppCompatButton = findViewById(R.id.last)
+        last.setOnClickListener {
+            resultView.setText(lastResult.toString())
         }
 
         val button0: AppCompatButton = findViewById(R.id.zero)
@@ -73,6 +80,7 @@ class MainActivity : AppCompatActivity() {
         buttonBackspace.setOnClickListener { backspace() }
     }
 
+
     private fun appendToExpression(value: String) {
         expression += value
         expressionView.setText(expression)
@@ -109,6 +117,7 @@ class MainActivity : AppCompatActivity() {
             curr += 1
         }
         resultView.setText(ans.toString())
+        lastResult = ans
     }
 
     private fun backspace() {
