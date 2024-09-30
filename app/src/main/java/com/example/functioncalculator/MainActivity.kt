@@ -50,10 +50,18 @@ class MainActivity : AppCompatActivity() {
         button9.setOnClickListener { appendToExpression("9") }
         buttonDecimal.setOnClickListener { appendToExpression(".") }
 //
-        buttonPlus.setOnClickListener { appendToExpression("+") }
-        buttonSubtract.setOnClickListener { appendToExpression("-") }
-        buttonMultiply.setOnClickListener { appendToExpression("*") }
-        buttonDivide.setOnClickListener { appendToExpression("/") }
+        buttonPlus.setOnClickListener {
+            appendToExpression("+")
+        }
+        buttonSubtract.setOnClickListener {
+            appendToExpression("-")
+        }
+        buttonMultiply.setOnClickListener {
+            appendToExpression("*")
+        }
+        buttonDivide.setOnClickListener {
+            appendToExpression("/")
+        }
 
         buttonEqual.setOnClickListener { calculateResult(expression) }
         buttonClear.setOnClickListener { clearExpression() }
@@ -65,15 +73,44 @@ class MainActivity : AppCompatActivity() {
         expressionView.setText(expression)
     }
 
-    private fun calculateResult(value: String): Int {
-        val ans = value.toInt()
-        resultView.setText(ans)
-        return ans
+    private fun calculateResult(expression : String) {
+        var ans = 0
+        var fnum = 0
+        var snum = 0
+        var curr = 0
+
+        for (ch in expression) {
+            if (ch == '+') {
+                fnum = expression.substring(0, curr).toInt()
+                snum = expression.substring(curr + 1).toInt()
+                ans = fnum + snum
+                break
+            } else if (ch == '-') {
+                fnum = expression.substring(0, curr).toInt()
+                snum = expression.substring(curr + 1).toInt()
+                ans = fnum - snum
+                break
+            } else if (ch == '*') {
+                fnum = expression.substring(0, curr).toInt()
+                snum = expression.substring(curr + 1).toInt()
+                ans = fnum * snum
+                break
+            } else if (ch == '/') {
+                fnum = expression.substring(0, curr).toInt()
+                snum = expression.substring(curr + 1).toInt()
+                ans = fnum / snum
+                break
+            }
+            curr += 1
+        }
+        resultView.setText(ans.toString())
     }
 
     private fun backspace() {
-        expression.dropLast(1)
-        expressionView.setText(expression)
+        if (expression.isNotEmpty()) {
+            expression = expression.dropLast(1)
+            expressionView.setText(expression)
+        }
     }
 
     private fun clearExpression() {
